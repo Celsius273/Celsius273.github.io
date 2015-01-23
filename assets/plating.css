@@ -1,0 +1,17 @@
+.jumbotron {
+	color: inherit;
+  	background-color: #aabbff;
+  	height: 100%;
+}
+.jumbotron .container {
+	/*min-height: 600px;*/
+	max-width: 100%;
+	height:50%;
+}
+html,body { 
+	
+	height:100%;
+}
+body{
+	padding-top: 50px; 
+}
