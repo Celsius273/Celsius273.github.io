@@ -1,17 +1,39 @@
 .jumbotron {
 	color: inherit;
-  	background-color: #aabbff;
+  	background: url('../images/bg.png') no-repeat center center;
+  	max-width: auto;
+  	background-size:cover;
   	height: 100%;
 }
 .jumbotron .container {
-	/*min-height: 600px;*/
+	height: inherit;
 	max-width: 100%;
-	height:50%;
+	display: table;
 }
-html,body { 
-	
+.jumbotron .container .title{
+	display: table-cell;
+	height: inherit;
+	color:#DDDDDD; 
+	vertical-align: middle;
+}
+
+#maintitle{
+	text-shadow: 2px 2px #333333;
+}
+
+#subtitle{
+	text-shadow: 1px 1px #333333;
+}
+#aboutme{
+	height: 2000px;
+	width: 300px;
+	color: #2288FF;
+}
+
+html{ 
 	height:100%;
 }
 body{
-	padding-top: 50px; 
+	height:100%;
+	padding-top: 50px;
 }
