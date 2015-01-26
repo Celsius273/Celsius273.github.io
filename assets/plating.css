@@ -4,6 +4,7 @@
   	max-width: auto;
   	background-size:cover;
   	height: 100%;
+  	margin-bottom: 0px;
 }
 .jumbotron .container {
 	height: inherit;
@@ -24,16 +25,17 @@
 #subtitle{
 	text-shadow: 1px 1px #333333;
 }
-#aboutme{
+#about{
+	margin: 0px;
 	height: 2000px;
-	width: 300px;
-	color: #2288FF;
+	background-color: #444444;
 }
 
 html{ 
 	height:100%;
+
 }
 body{
-	height:100%;
 	padding-top: 50px;
+	height:100%;
 }
