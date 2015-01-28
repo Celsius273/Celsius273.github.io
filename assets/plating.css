@@ -6,12 +6,12 @@
   	height: 100%;
   	margin-bottom: 0px;
 }
-.jumbotron .container {
+.jumbotron .container-fluid {
 	height: inherit;
 	max-width: 100%;
 	display: table;
 }
-.jumbotron .container .title{
+.jumbotron .container-fluid .title{
 	display: table-cell;
 	height: inherit;
 	color:#DDDDDD; 
@@ -28,7 +28,8 @@
 #about{
 	margin: 0px;
 	height: 2000px;
-	background-color: #444444;
+	background-color: #222222;
+	color:#DDDDDD;
 }
 
 html{ 
