@@ -1,23 +1,36 @@
 $(document).ready(function(){
 	var w = $(window);
 
-	$("#about-nav").hover(function(){
-		$("#about-nav").toggleClass( "active" );
+	var mouseoverride = false;
 
-	},function(){	
-		$("#about-nav").toggleClass( "active" );
+	$("#about-nav").hover(function(){
+		$("#about-nav").toggleClass( "active", true );
+		mouseoverride = true;
+	},function(){
+		if (mouseoverride == true){	
+			$("#about-nav").toggleClass( "active", false );
+			mouseoverride = false;
+		}
 	});
 
 	$("#projects-nav").hover(function(){
-		$("#projects-nav").toggleClass( "active" );
+		$("#projects-nav").toggleClass( "active", true );
+		mouseoverride = true;
 	},function(){
-		$("#projects-nav").toggleClass( "active" );
+		if (mouseoverride == true){	
+			$("#projects-nav").toggleClass( "active", false );
+			mouseoverride = false;
+		}
 	});
 
 	$("#contact-nav").hover(function(){
-		$("#contact-nav").toggleClass( "active" );
+		$("#contact-nav").toggleClass( "active", true );
+		mouseoverride = true;
 	},function(){
-		$("#contact-nav").toggleClass( "active" );
+		if (mouseoverride == true){	
+			$("#contact-nav").toggleClass( "active", false );
+			mouseoverride = false;
+		}
 	});
 
 	function updateNavbar(){
@@ -31,21 +44,29 @@ $(document).ready(function(){
 	    var contact_position = contact_offset.top-w.scrollTop();
 
 	    if ( $(window).height() - $("#contact").height() == contact_position){
-	    	$("#about-nav").toggleClass( "active" , false);
-	    	$("#projects-nav").toggleClass( "active" , false);
 	    	$("#contact-nav").toggleClass( "active" , true);
+	    	if (mouseoverride == false){
+	    		$("#projects-nav").toggleClass( "active", false );
+	    		$("#about-nav").toggleClass( "active", false );
+	    	}
 	    }else if (project_position <= 0){
-	    	$("#about-nav").toggleClass( "active" , false);
 	    	$("#projects-nav").toggleClass( "active" , true);
-	    	$("#contact-nav").toggleClass( "active" , false);
+	    	if (mouseoverride == false){
+	    		$("#about-nav").toggleClass( "active", false );
+	    		$("#contact-nav").toggleClass( "active", false );
+	    	}
 	    }else if (about_position <= 0){
 	    	$("#about-nav").toggleClass( "active" , true);
-	    	$("#projects-nav").toggleClass( "active" , false);
-	    	$("#contact-nav").toggleClass( "active" , false);
+	    	if (mouseoverride == false){
+	    		$("#projects-nav").toggleClass( "active", false );
+	    		$("#contact-nav").toggleClass( "active", false );
+	    	}
 	    }else{
-	    	$("#about-nav").toggleClass( "active" , false);
-	    	$("#projects-nav").toggleClass( "active" , false);
-	    	$("#contact-nav").toggleClass( "active" , false);
+	    	if (mouseoverride == false){
+	    		$("#about-nav").toggleClass( "active", false );
+	    		$("#projects-nav").toggleClass( "active", false );
+	    		$("#contact-nav").toggleClass( "active", false );
+	    	}
 	    }
 	}
 
