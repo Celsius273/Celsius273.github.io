@@ -36,13 +36,24 @@
 	color:#DDDDDD;
 }
 #aboutme{
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 600px;
+	text-align: center;
 }
 #interests{
-	margin-left: 12%;
-	margin-right: 12%;
+	margin-top: 60px;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    text-align: center;
 }
+#interest-text{
+	max-width: 300px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
 #projects{
 	margin: 0px;
 	height: 1000px;
