@@ -18,6 +18,19 @@
 	vertical-align: middle;
 }
 
+#scroller{
+	position: relative;
+    left: 0px;
+    top: 0px;
+    height: 72px;
+    width: 100%;
+    opacity: 0;
+    margin-top: -72px;
+}
+#scroller:hover{
+    opacity: 0.8;
+}
+
 .col-lg-4{
 	padding: 20px;
 }
@@ -72,7 +85,9 @@
 #abouthr{
 	border-top: 2px solid #F96B55;
 }
-
+#icon{
+	color: #F96B55;
+}
 html{ 
 	height:100%;
 

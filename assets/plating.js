@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	var w = $(window);
-
 	var mouseoverride = false;
+	var screenHeight = w.innerHeight;
+	$("#scroller").click(function(e){
+		$("html, body").animate({scrollTop : w.height()});
+	});
 
 	$("#about-nav").hover(function(){
 		$("#about-nav").toggleClass( "active", true );
@@ -34,6 +37,7 @@ $(document).ready(function(){
 	});
 
 	function updateNavbar(){
+		//Well the website as of now only has 3 sections so this code should be fine
 		var about_offset = $("#about").offset();
 	    var about_position = about_offset.top-w.scrollTop();
 
@@ -71,5 +75,4 @@ $(document).ready(function(){
 	}
 
 	setInterval(updateNavbar, 50);
-
 });
