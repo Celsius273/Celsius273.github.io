@@ -74,5 +74,12 @@ $(document).ready(function(){
 	    }
 	}
 
+
+	$('#bt1').click(function() {
+		$('#fr1').attr('target',"_blank");
+        $('#fr1').attr('action','mailto:kelvin.8000@gmail.com?subject=' + $('#tb1').val() + '&body=' + $('#tb2').val());
+        $('#fr1').submit();
+    });
+
 	setInterval(updateNavbar, 50);
 });

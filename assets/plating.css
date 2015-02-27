@@ -143,6 +143,16 @@
    	vertical-align: middle;
 }
 
+#gravisim{
+	background:url(gravisim.png);
+	background-repeat: no-repeat;
+	background-size: 870px;
+	background-position: center center; 
+	width:900px;
+   	height:640px;
+   	vertical-align: middle;
+}
+
 #project-text{  
 	font-family:Helvetica;
 	color:rgba(255,255,255,.85);
@@ -161,7 +171,7 @@
 	margin: 0px;
 	height: 100%;
 	background-color: #333333;
-	color:#DDDDDD;
+	color:#333333;
 }
 
 #footer{
