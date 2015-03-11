@@ -39,7 +39,7 @@ $(document).ready(function(){
 	function resizeProjects(){
 		var photos = document.getElementsByClassName('project-photo');
 		for(i=0; i<photos.length; i++) {
-		    photos[i].style.height = "300px";
+		    photos[i].style.height = (0.7111111111111111*photos[i].offsetWidth)+"px";
 		  }
 	}
 
