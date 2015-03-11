@@ -36,6 +36,13 @@ $(document).ready(function(){
 		}
 	});
 
+	function resizeProjects(){
+		var photos = document.getElementsByClassName('project-photo');
+		for(i=0; i<photos.length; i++) {
+		    photos[i].style.height = "300px";
+		  }
+	}
+
 	function updateNavbar(){
 		//Well the website as of now only has 3 sections so this code should be fine
 		var about_offset = $("#about").offset();
@@ -82,4 +89,5 @@ $(document).ready(function(){
     });
 
 	setInterval(updateNavbar, 50);
+	setInterval(resizeProjects, 50);
 });
