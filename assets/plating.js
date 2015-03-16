@@ -40,8 +40,15 @@ $(document).ready(function(){
 		var photos = document.getElementsByClassName('project-photo');
 		for(i=0; i<photos.length; i++) {
 		    photos[i].style.height = (0.7111111111111111*photos[i].offsetWidth)+"px";
-		  }
+		}
 	}
+
+	//call once when page is loading, then call when page is resizing
+	resizeProjects();
+	$( window ).resize(function() {
+		resizeProjects();
+	});
+
 
 	function updateNavbar(){
 		//Well the website as of now only has 3 sections so this code should be fine
@@ -89,5 +96,5 @@ $(document).ready(function(){
     });
 
 	setInterval(updateNavbar, 50);
-	setInterval(resizeProjects, 50);
+	//setInterval(resizeProjects, 50);
 });
