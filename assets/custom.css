@@ -52,8 +52,8 @@
 	margin: 0px;
 	padding-bottom: 40px;
 	height: auto;
-	background-color: #333333;
-	color:#DDDDDD;
+	background-color: #222222;
+	color:#EEEEEE;
 	vertical-align: middle;
 }
 #aboutme{
@@ -70,6 +70,14 @@
     max-width: 940px;
     text-align: center;
 }
+
+#contact_icons{
+	margin-top: 20px;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+    text-align: center;
+}
 #interest-text{
 	max-width: 280px;
 	margin-left: auto;
@@ -80,8 +88,8 @@
 	margin: 0px;
 	padding-bottom: 25px;
 	height: auto;
-	background-color: #EEEEEE;
-	color:#333333;
+	background-color: #FAFAFA;
+	color:#222222;
 }
 
 #projects-intro{
@@ -90,12 +98,12 @@
 	max-width: 900px;
 	text-align: center;
 	font-size: 18px;
-	color: #333333;
+	color: #222222;
 }
 
 .container-fluid .project-photo{
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 0px;
+	padding-left: 0px;
 	margin-right: auto;
 	margin-left: auto;
 	width:60%;
@@ -103,7 +111,7 @@
   	background-size:cover;
   	background-position: center center; 
   	background-repeat: no-repeat;
-	border-radius:5px;
+	border-radius:15px;
 	overflow:hidden;
 }
 
@@ -141,7 +149,7 @@
 #project-text{  
 	font-family:Helvetica;
 	color:rgba(255,255,255,.85);
-	font-size: 2vw;
+	font-size: 1.7vw;
 	margin: 0;
 	padding: 10px;
    	position: absolute;               
@@ -154,25 +162,42 @@
 
 #contact{
 	margin: 0px;
-	height: 100%;
-	background-color: #333333;
-	color:#333333;
+	min-height: 380px;
+	background-color: #222222;
+	color:#FAFAFA;
+	font-size: 1.5vw;
 }
 
 #footer{
 	margin: 0px;
 	padding-bottom: 15px;
-	background-color: #EEEEEE;
-	color:#333333;
+	background-color: #FAFAFA;
+	color:#222222;
 }
 #homehr{
-	border-top: 2px solid #eee;
+	border-top: 2px solid #FAFAFA;
 }
 #abouthr{
 	border-top: 2px solid #F96B55;
 }
 #icon{
 	color: #F96B55;
+}
+
+.link_icon{
+	height: 100px;
+	width: 100px;
+}
+
+#link_icon-small{
+	height:97px;
+	width: 97px;
+}
+
+.link_icon:hover{
+	opacity:0.3;
+	-webkit-transition: opacity .15s ease;
+	-moz-transition: opacity .15s ease;
 }
 html{ 
 	height:100%;

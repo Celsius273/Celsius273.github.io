@@ -6,6 +6,8 @@ $(document).ready(function(){
 		$("html, body").animate({scrollTop : w.height()});
 	});
 
+
+	//TODO: un-hack this part now that we have >3 elements on the navbar
 	$("#about-nav").hover(function(){
 		$("#about-nav").toggleClass( "active", true );
 		mouseoverride = true;
@@ -36,6 +38,16 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#resume-nav").hover(function(){
+		$("#resume-nav").toggleClass( "active", true );
+		mouseoverride = true;
+	},function(){
+		if (mouseoverride == true){	
+			$("#resume-nav").toggleClass( "active", false );
+			mouseoverride = false;
+		}
+	});
+
 	function resizeProjects(){
 		var photos = document.getElementsByClassName('project-photo');
 		for(i=0; i<photos.length; i++) {
@@ -61,7 +73,8 @@ $(document).ready(function(){
 	    var contact_offset = $("#contact").offset();
 	    var contact_position = contact_offset.top-w.scrollTop();
 
-	    if ( $(window).height() - $("#contact").height() == contact_position){
+	    //if ( $(window).height() - $("#contact").height() == contact_position){
+	    if ( $(window).height() >= contact_position){
 	    	$("#contact-nav").toggleClass( "active" , true);
 	    	if (mouseoverride == false){
 	    		$("#projects-nav").toggleClass( "active", false );
@@ -95,6 +108,9 @@ $(document).ready(function(){
         $('#fr1').submit();
     });
 
-	setInterval(updateNavbar, 50);
-	//setInterval(resizeProjects, 50);
+    updateNavbar();
+	$( window ).scroll(function() {
+		updateNavbar();
+	});
+	//setInterval(updateNavbar, 50);
 });
